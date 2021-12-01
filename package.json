@@ -1,0 +1,28 @@
+{
+  "name": "accountbook",
+  "version": "1.0.0",
+  "description": "참고 블로그 : https://brunch.co.kr/@sungi-kim/43",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "google-spreadsheet": "^3.2.0",
+    "nodemon": "^2.0.15",
+    "slack": "^11.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olennis/accountbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olennis/accountbook/issues"
+  },
+  "homepage": "https://github.com/olennis/accountbook#readme"
+}

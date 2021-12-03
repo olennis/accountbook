@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "esModuleInterop": true
+    },
+    "include": ["src/*"]
+  }
+  
+  /*
+      resolveJsonModule : json 파일을 import 로 받아오는 걸 허용하는 옵션
+    esModuleInterop : commonJS 형태의 모듈도 imort 로 받아오는 걸 허용해주는 옵션
+  */

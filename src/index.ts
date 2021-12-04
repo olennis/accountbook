@@ -14,18 +14,15 @@ const slackEvents = createEventAdapter(CONFIG.SIGNING_SECRET);
 const webClient = new WebClient(CONFIG.BOT_USER_OAUTH_ACCESS_TOKEN);
 // 메시지 이벤트 구독하기
 slackEvents.on('message', async (event) => {
+    console.log(event);
   
-  const message = event.text
-  console.log(message)
-  if(Number(event.text.split(' ')[0])){
+    if (event.text == '?하이') {
       webClient.chat.postMessage({
-          text : `사용금액 ~~원 기록되었습니다`,
-          channel : event.channel
+        text: '안녕하세요!',
+        channel: event.channel,
       });
-  } else {
-    return
-  }
-});
+    }
+  });
 
 // 메지지 이벤트 엔드포인트를 express 에 등록하기
 app.use('/slack/events', slackEvents.requestListener());

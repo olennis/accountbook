@@ -20,22 +20,22 @@ async function accessSheet(){
 }
 
 // 메시지 이벤트 구독하기
-slackEvents.on('message', async (event) => {
-    if(event.bot_id){//봇이 입력한 부분
+slackEvents.on('message', async (e) => {
+    if(e.bot_id){//봇이 입력한 부분
         return
     }
     else{//유저 메시지
-      const message = event.text.split(' ')
+      const message = e.text.split(' ')
       if(!Number(message[1])){
         webClient.chat.postMessage({
             text: '항목 금액 비고 순으로 입력할 것!',
-            channel: event.channel,
+            channel: e.channel,
           });
       }
       else{
         webClient.chat.postMessage({
             text: `${message[0]} 에서 ${message[1]}₩이 지출되었습니다.`,
-            channel: event.channel,
+            channel: e.channel,
           });
       }
     }
